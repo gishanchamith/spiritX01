@@ -1,0 +1,190 @@
+/* Global Styles */
+body {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    margin: 50px;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+  }
+  
+  /* Signup Form Background */
+  .signup-background {
+    position: fixed;
+    right: 200px;
+    text-align: center;
+    background-color: #ffef5e;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Headings */
+  h2, h4 {
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  p {
+    color: aliceblue;
+  }
+  
+  /* Form Styling */
+  form {
+    display: inline-block;
+    text-align: right;
+  }
+  
+  /* Input Fields */
+  input {
+    background-color: rgba(27, 22, 22, 0.8);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: aliceblue;
+    padding: 10px;
+    width: 250px;
+    margin-bottom: 10px;
+  }
+  
+  input::placeholder {
+    color: gray;
+    font-family: "Quicksand", sans-serif;
+    font-size: 16px;
+    opacity: 0.8;
+  }
+  
+  /* Custom Input Styles */
+  .form {
+    --width-of-input: 250px;
+    --border-height: 2px;
+    --border-before-color: rgba(221, 221, 221, 0.39);
+    --border-after-color: #5891ff;
+    --input-hovered-color: rgba(72, 133, 224, 0.2);
+    position: relative;
+    width: var(--width-of-input);
+  }
+  
+  /* Styling for animated input */
+  .input {
+    color: #fff;
+    font-size: 0.9rem;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    border-bottom: var(--border-height) solid var(--border-before-color);
+  }
+  
+  /* Animated Input Border */
+  .input-border {
+    position: absolute;
+    background: var(--border-after-color);
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  /* Input Effects */
+  input:hover {
+    background: var(--input-hovered-color);
+  }
+  
+  input:focus {
+    outline: none;
+  }
+  
+  input:focus ~ .input-border {
+    width: 100%;
+  }
+  
+  /* Button Styling */
+  button {
+    font-size: 1.1em;
+    padding: 0.6em 1em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #444;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    transition: 0.3s;
+    align-items: center;
+  }
+  
+  button:hover {
+    background-color: #666;
+  }
+  
+  button:active {
+    background-color: #333;
+  }
+  
+  /* Container Styles */
+  .container {
+    position: relative;
+    padding: 20px;
+    background: linear-gradient(135deg, #12151A, #1E5C52);
+
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 10px;
+    z-index: -10;
+    filter: blur(0);
+    transition: filter 0.4s ease;
+  }
+  
+  .container:hover::before {
+    background: linear-gradient(90deg, #18181A,#414745);
+    filter: blur(1.2em);
+  }
+  
+  /* Links */
+  .custom-link,
+  .google {
+    color: rgb(114, 204, 207);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .custom-link:hover,
+  .google:hover {
+    color: rgb(99, 206, 99);
+  }
+  
+  .google-cont {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Style for the "Recover Password" link */
+.recover {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .recover a {
+    color: #A1C4A1;  /* Light green color for the link */
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .recover a:hover {
+    color: #1E5C52;  /* Darker green on hover */
+    text-decoration: underline;
+  }
+  
